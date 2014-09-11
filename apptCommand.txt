@@ -1,0 +1,33 @@
+・aaptコマンド
+
+1.apkファイルの内容表示
+# appt list xxxx.apk
+
+2.apkファイルのdump(label user permission表示)
+# appt d badging xxx.apk
+
+3.apkファイルのdump(permisson表示)
+# appt d permissions xxx.apk
+
+4.apkファイルのdump(resouce表示)
+# appt d resrouces xxx.apk
+
+5.apkファイルのdump(ldpi-v4,mdip-v4,hdip-v4としか表示されない
+# appt d configurations xxx.apk
+
+6.apkファイル内にあるxml情報表示(label,activity,permission等)
+# appt d xmltree xxx.apk AndroidManifest.xml
+
+7.apkファイルにあるxml情報表示(stringとid)
+# appt d xmlstrings xx.apk AndroidManifest.xml
+
+
+・monkeyrunner
+# Imports the monkeyrunner modules used by this program
+from com.android.monkeyrunner import MonkeyRunner, MonkeyDevice
+
+# Connects to the current device, returning a MonkeyDevice object
+device = MonkeyRunner.waitForConnection()
+
+# Presses the Menu button
+device.press('KEYCODE_MENU', MonkeyDevice.DOWN_AND_UP)
