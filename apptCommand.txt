@@ -37,3 +37,8 @@ result = device.takeSnapshot()
 
 # Writes the screenshot to a file
 result.writeToFile('myproject/shot1.png','png')
+
+
+・adbコマンド
+端末内にapkファイルをインストール
+　./adb install [パス]
